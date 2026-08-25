@@ -25,7 +25,7 @@ The board is driven by a Seeeduino XIAO RP2040, soldered directly onto the PCB (
 
 The rotary encoder and oled display are connected using GPIO pins on the XIAO:
 * **Encoder:** Rotation: GP0, GP1, Push Switch: GP2
-* **oled (I2C):** SDA: GP4, SCL: GP6
+* **Oled (I2C):** SDA: GP4, SCL: GP6
 
 ![Schematic](images/schematic.png)
 
