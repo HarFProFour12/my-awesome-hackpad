@@ -84,9 +84,9 @@ I've done:
 
 I have left:
 
-* [ ] Parts sourcing
-* [ ] Assembly
-* [ ] Testing
+* Parts sourcing
+* Assembly
+* Testing
 
 ## Design
 
