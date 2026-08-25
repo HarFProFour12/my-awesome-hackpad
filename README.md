@@ -1,58 +1,46 @@
-# ⌨️ HackPad — 8-Key Macropad
+# My Awesome HackPad: 8-Key Macropad
 
-A custom mechanical macropad built from scratch — PCB, firmware, and case all designed in-house. Eight programmable keys, a rotary encoder for quick adjustments, and an OLED screen to show live status.
+This is my custom mechanical macropad I built from scratch in collaboration with Stardance and Hackclub. It features 8 programmable keys, a rotary encoder for volume adjustments, and an .91" oled display.
 
 ![Overall HackPad (Render)](images/hackpad_overall.png)
 
-## ✨ Features
+## Features
 
-* **8 mechanical switches** for custom keybindings & macro shortcuts
-* **Rotary encoder** with push-button (volume, scroll, or custom actions)
-* **OLED status display** (128x32 I2C)
-* **QMK-powered firmware** (fully remappable)
-* **USB-C connectivity**
-* **Custom 3D-printed enclosure**
+* **8 mechanical switches** for custom macro shortcuts
+* **Rotary encoder** with push-button (volume control)
+* **oled display** (128x32 I2C)
+* **QMK-powered firmware**
+* **USB-C connection**
+* **Custom 3D-printed body**
 
-## 🖥️ Interface
+## Interface
 
-The macropad connects over USB-C and acts as a standard HID keyboard, working out of the box on macOS, Windows, and Linux. Key functions, layers, and encoder behaviors are defined in the QMK firmware and can be remapped without touching the hardware.
+The macropad connects to the computer using a usb-c cable and acts as a standard keyboard, working with all operating sytems. The macros can be remapped without touching the hardware through the QMK firmware.
 
-The OLED display shows live status info and can be configured to display active layers, system stats, or custom text.
+The oled display can show live status info and can be also be programmed to show other stuff as well, such as system stats, or custom text.
 
 ## 🧠 How It Works
 
-The board is driven by a **Seeed XIAO RP2040**, soldered directly onto the PCB. Each of the 8 switches is wired into a 2x4 key matrix (`COL2ROW` diode direction) read by the microcontroller. QMK handles matrix scanning, debouncing, and USB HID reporting.
+The board is driven by a Seeeduino XIAO RP2040, soldered directly onto the PCB (made from scratch in Kicad). All of the 8 switches is wired in matrix, which is read by the microcontroller. The QMK firmware handles almost everything, with the only things that need configuring being the macros, the hackpad's hardware and metadata and the config.h file.
 
-The rotary encoder and OLED display are connected via dedicated GPIO pins on the XIAO RP2040:
-* **Encoder:** Pins `GP0` & `GP1` (Rotation), `GP2` (Push Switch)
-* **OLED (I2C):** `GP4` (SDA) & `GP6` (SCL)
+The rotary encoder and oled display are connected using GPIO pins on the XIAO:
+* **Encoder:** Rotation: GP0, GP1, Push Switch: GP2
+* **oled (I2C):** SDA: GP4, SCL: GP6
 
 ![Schematic](images/schematic.png)
 
 ![PCB Layout](images/pcb_layout.png)
 
-## 🔧 Hardware
+## Hardware
 
 * **Microcontroller:** Seeed XIAO RP2040
 * **Switches:** 8× Mechanical key switches
 * **Control:** 1× Rotary encoder with push-button
-* **Display:** 0.91" 128x32 OLED Display
+* **Display:** 0.91" 128x32 oled Display
 * **PCB:** Custom 2-layer board designed in KiCad
 * **Enclosure:** Custom 3D-printed body and top lid
-
-## 📋 Bill of Materials
-
-| Part | Qty | Notes |
-|---|---|---|
-| Seeed XIAO RP2040 | 1 | Main MCU |
-| Mechanical switches | 8 | Cherry MX style |
-| Rotary encoder w/ switch | 1 | Volume & media control |
-| 128x32 OLED Display | 1 | I2C Interface |
-| Diodes (1N4148) | 8 | Surface mount / Through-hole |
-| Custom PCB | 1 | 2-layer board |
-| 3D printed case | 1 set | Top lid + main body |
-
-## 📁 Project Structure
+* 
+## Project Structure
 
 ```text
 my_awesome_hackpad/
@@ -78,35 +66,33 @@ my_awesome_hackpad/
     ├── hackpad_overall.png
     ├── schematic.png
     ├── pcb_layout.png
-    └── case_assembly.png
+    └── case_assembly.pn
 
-The design is split into CAD, PCB, and firmware folders so each part of the project can be reviewed and iterated on independently.
+## Current Status
 
-## 🚧 Current Status
+The project is still under development.
 
-The project is still **under development**.
+I'm currently working on:
 
-Currently working on:
-
-* [x] PCB schematic design
+* [x] Designing PCB schematic
 * [x] PCB layout and routing
-* [x] 3D case design in Fusion 360
+* [x] Designing the case in Fusion 360
 * [x] Switch and encoder placement
-* [x] Case engraving details
-* [x] QMK firmware configuration
+* [x] Case details
+* [x] QMK firmware setup
 * [ ] Parts sourcing
-* [ ] Physical assembly
-* [ ] Final testing
+* [ ] Assembly
+* [ ] Testing
 
-## 🎨 Design
+## Design
 
-The case was modeled in Fusion 360 around the PCB layout, with cutouts for the switches, encoder, OLED window, and USB-C port. The enclosure includes custom engraved text on the case exterior for a personalized touch.
+The enclosure was 3d modeld in Autodesk Fusion around the layout of the pcb, with cutouts for the keys, the oled and the encoder, and one for the usb-c cable, as well. The enclosure also has some custom engraved text on the outside of the case.
 
-The board layout keeps all 8 switches in a clean grid, with the OLED and encoder positioned along the top edge for easy access while typing.
+The board layout keeps all 8 switches closely together, along with the oled and encoder positioned on the top for easier access.
 
 ![Case Assembly](images/case_assembly.png)
 
-## 🛠️ Built With
+## Built With
 
 * KiCad
 * Autodesk Fusion 360
@@ -118,11 +104,10 @@ The board layout keeps all 8 switches in a clean grid, with the OLED and encoder
 
 I used Claude during development, mainly for:
 
-- **KiCad guidance:** since this was my first time using the software, for help navigating the interface.
+- **KiCad help:** since this was my first time using the software, for help navigating the interface.
 - **Code debugging:** fixing issues in the firmware.
 
 The actual PCB design, case design, firmware logic, and assembly were done by me.
 
 ---
 **Made by Harry Fanouriakis**
-*A macropad, built one key at a time.* 
