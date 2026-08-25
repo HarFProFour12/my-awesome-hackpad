@@ -73,14 +73,17 @@ my_awesome_hackpad/
 
 The project is still under development.
 
-I'm currently working on:
+I've done:
 
-* [x] Designing PCB schematic
-* [x] PCB layout and routing
-* [x] Designing the case in Fusion 360
-* [x] Switch and encoder placement
-* [x] Case details
-* [x] QMK firmware setup
+* Designing PCB schematic
+* PCB layout and routing
+* Designing the case in Fusion 360
+* Switch and encoder placement
+* Case details
+* QMK firmware setup
+
+I have left:
+
 * [ ] Parts sourcing
 * [ ] Assembly
 * [ ] Testing
