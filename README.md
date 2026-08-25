@@ -65,7 +65,7 @@ my_awesome_hackpad/
 │   ├── hackpad.kicad_sch
 │   └── hackpad.kicad_pcb
 ├── Firmware/
-│   └── hackpad/
+│   └── my_awesome_hackpad/
 │       ├── info.json
 │       ├── config.h
 │       ├── rules.mk
