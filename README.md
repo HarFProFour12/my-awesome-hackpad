@@ -67,6 +67,7 @@ my_awesome_hackpad/
     ├── schematic.png
     ├── pcb_layout.png
     └── case_assembly.pn
+```
 
 ## Current Status
 
@@ -102,7 +103,7 @@ The board layout keeps all 8 switches closely together, along with the oled and 
 
 ## 🤖 AI Usage
 
-I used Claude during development, mainly for:
+I used Claude during the making of this project:
 
 - **KiCad help:** since this was my first time using the software, for help navigating the interface.
 - **Code debugging:** fixing issues in the firmware.
