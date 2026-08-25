@@ -2,7 +2,7 @@
 
 A custom mechanical macropad built from scratch — PCB, firmware, and case all designed in-house. Eight programmable keys, a rotary encoder for quick adjustments, and an OLED screen to show live status.
 
-![Overall HackPad](images/hackpad_overall.png)
+![Overall HackPad (Render)](images/hackpad_overall.png)
 
 ## ✨ Features
 
@@ -58,8 +58,8 @@ The rotary encoder and OLED display are connected via dedicated GPIO pins on the
 my_awesome_hackpad/
 ├── CAD/
 │   ├── hackpad_assembly.step
-│   ├── case_top.stl
-│   └── case_bottom.stl
+│   ├── case_top.step
+│   └── case_bottom.step
 ├── PCB/
 │   ├── hackpad.kicad_pro
 │   ├── hackpad.kicad_sch
@@ -74,9 +74,55 @@ my_awesome_hackpad/
 │               └── keymap.c
 ├── production/
 │   └── gerbers.zip
-├── images/
-│   ├── hackpad_overall.png
-│   ├── schematic.png
-│   ├── pcb_layout.png
-│   └── case_assembly.png
-└── README.md
+└── images/
+    ├── hackpad_overall.png
+    ├── schematic.png
+    ├── pcb_layout.png
+    └── case_assembly.png
+
+The design is split into CAD, PCB, and firmware folders so each part of the project can be reviewed and iterated on independently.
+
+## 🚧 Current Status
+
+The project is still **under development**.
+
+Currently working on:
+
+* [x] PCB schematic design
+* [x] PCB layout and routing
+* [x] 3D case design in Fusion 360
+* [x] Switch and encoder placement
+* [x] Case engraving details
+* [x] QMK firmware configuration
+* [ ] Parts sourcing
+* [ ] Physical assembly
+* [ ] Final testing
+
+## 🎨 Design
+
+The case was modeled in Fusion 360 around the PCB layout, with cutouts for the switches, encoder, OLED window, and USB-C port. The enclosure includes custom engraved text on the case exterior for a personalized touch.
+
+The board layout keeps all 8 switches in a clean grid, with the OLED and encoder positioned along the top edge for easy access while typing.
+
+![Case Assembly](images/case_assembly.png)
+
+## 🛠️ Built With
+
+* KiCad
+* Autodesk Fusion 360
+* QMK Firmware
+* 3D printing
+* Collaboration with HackClub - Stardance
+
+## 🤖 AI Usage
+
+I used Claude during development, mainly for:
+
+- **KiCad guidance:** since this was my first time using the software, for help navigating the interface.
+- **Code debugging:** fixing issues in the firmware.
+
+The actual PCB design, case design, firmware logic, and assembly were done by me.
+
+---
+**Made by Harry Fanouriakis**
+*A macropad, built one key at a time.* 
