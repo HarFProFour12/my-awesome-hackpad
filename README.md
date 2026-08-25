@@ -39,7 +39,7 @@ The rotary encoder and oled display are connected using GPIO pins on the XIAO:
 * **Display:** 0.91" 128x32 oled Display
 * **PCB:** Custom 2-layer board designed in KiCad
 * **Enclosure:** Custom 3D-printed body and top lid
-* 
+
 ## Project Structure
 
 ```text
