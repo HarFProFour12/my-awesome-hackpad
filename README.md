@@ -114,4 +114,8 @@ I used Claude during the making of this project:
 The actual PCB design, case design, firmware logic, and assembly were done by me.
 
 ---
+### Created for Hack Club’s Stardance.
+This project was created as part of Hack Club Stardance, a Hack Club event encouraging young people to build and ship their own projects.
+
+---
 **Made by Harry Fanouriakis**
